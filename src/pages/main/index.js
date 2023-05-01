@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import SignInForm from "./components/Signin";
 import SignUpForm from "./components/Signup";
+import { flexCenter } from "../../styles/common";
 const MainPage = () => {
   let isFormLogin = true;
 
@@ -25,9 +26,7 @@ export default MainPage;
 const Container = styled.div`
   width: 100%;
   height: calc(100vh - 60px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter}
   flex-direction: column;
 `;
 
@@ -35,7 +34,7 @@ const Header = styled.div`
   width: 360px;
   height: 48px;
   display: flex;
-  background-color: #00c7ae;
+  background-color: ${({ theme }) => theme.PALETTE.primary[300]};
 `;
 
 // 일반 components와 styled-components의 구분을 위해 만든 객체
