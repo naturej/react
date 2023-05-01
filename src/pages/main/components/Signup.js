@@ -1,3 +1,4 @@
+import BasicButton from "../../../components/Button/Button";
 import * as S from "./style";
 
 const SignUpForm = () => {
@@ -15,7 +16,9 @@ const SignUpForm = () => {
         <label>비밀번호 확인</label>
         <input />
       </S.InputBox>
-      <button>로그인</button>
+      <BasicButton size={"full"} shape={"default"} variant={"primary"}>
+        회원가입
+      </BasicButton>
     </S.Form>
   );
 };
