@@ -1,15 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "../pages/main";
 import TodoPage from "../pages/todo";
+import Layout from "../components/Layout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <MainPage />,
-  },
-  {
-    path: "/todo/:todoId",
-    element: <TodoPage />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <MainPage />,
+      },
+      {
+        path: "/todo/:todoId",
+        element: <TodoPage />,
+      },
+    ],
   },
 ]);
 export default router;
